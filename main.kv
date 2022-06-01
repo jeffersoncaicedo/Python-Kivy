@@ -1,0 +1,65 @@
+<GridMain>:
+    rows: 3
+    canvas:
+        Color:
+            rgb: 1, 1, 1
+            # rgb: 0.92, 0.93, 0.94
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    GridLayout:
+        cols: 2
+        size_hint: 1, 0.24
+        GridLayout:
+            cols: 1
+            size_hint: 0.19, 0.19
+            canvas:
+                Color:
+                    rgb: 0.33, 0.30, 0.27
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        GridLayout:
+            rows: 2
+            size_hint: 0.91, 0.24
+            canvas:
+                Color:
+                    rgb: 0.33, 0.30, 0.27
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            Label:
+                text: "Cooperativa de Transporte"
+                font_size: 30
+                bold: True
+            Label:
+                text: root.fechatext
+                font_size: 21
+    GridLayout:
+        cols: 2
+        size_hint: 1, 0.7
+        Image:
+            source: 'horarios.png'
+            pos: self.pos
+
+        Video:
+            size_hint: 1.9, 1.1
+            pos: self.pos
+            source: 'videopublicidad.mp4'
+            state: 'play'
+            options: {'eos': 'loop'}
+            allow_stretch: True
+
+    GridLayout:
+        rows: 1
+        size_hint: 1, 0.06
+        canvas:
+            Color:
+                rgb: 0.33, 0.30, 0.27
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Label:
+            text: "www.github.com/jeffersoncaicedo"
+            italic: True
+            pos: self.pos
